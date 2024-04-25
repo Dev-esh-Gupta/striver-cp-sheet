@@ -4,20 +4,23 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    bool increase = true;
-    while(n--){
-        int b;
-        cin >> b;
-        if(b%2 == 0){
-            cout << b/2 << endl;
-        }else{
-            if(increase){
-                cout << floor(((1.0)*b)/2) << endl;
-                increase = false;
+    vector<int> rating(n);
+    int odd = 0;
+    for(int i=0; i<n; i++){
+        cin >> rating[i];
+        if(rating[i]%2) odd++;
+    }
+    odd = odd / 2;
+    for(auto x : rating){
+        if(x%2){
+            if(odd > 0){
+                odd--;
+                x--;
             }else{
-                cout << ceil(((1.0)*b)/2) << endl;
-                increase = true;
+                x++;
             }
         }
+        cout << x/2 << endl;
     }
+    return 0;
 }
