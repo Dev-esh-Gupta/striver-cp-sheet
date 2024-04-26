@@ -11,7 +11,7 @@ int main(){
         cin >> a >> b >> c >> d;
         int x = b;
         int y = c;
-        int z = min(c+1, d);
+        int z = c;
         cout << x << " " << y << " "  << z << " " << endl;
     }
 }
