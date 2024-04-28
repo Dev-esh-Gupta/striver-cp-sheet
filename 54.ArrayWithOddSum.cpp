@@ -20,13 +20,13 @@ int main(){
             if(evenCount && oddCount){
                 cout << "YES" << endl;
                 flag = false;
+                break;
             }
         }
         if(flag) {
-            if(oddCount%2 != 0) cout << "YES" << endl;
-            else{
-                cout <<"NO"<< endl;
-            }
+            if(evenCount == n) cout << "NO" << endl;
+            else if(oddCount%2 == 0) cout << "NO" << endl;
+            else cout << "YES" << endl;
         }
     }
 }
