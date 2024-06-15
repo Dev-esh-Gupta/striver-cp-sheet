@@ -14,12 +14,15 @@ int main(){
                 cout << "  ";
             }
             for(int k=0; k<(i+1); k++){
-                cout << k << " ";
+                cout << k;
+                if(i != 0) cout << " ";
                 j--;
             }
             while(j != 0){
                 j--;
-                cout << j << " ";
+                cout << j ;
+                if(j != 0) cout  << " ";
+
             }
             // while()
             if(i != n){
@@ -35,12 +38,14 @@ int main(){
                 cout << "  ";
             }
             for(int k=0; k<run/2; k++){
-                cout << k << " ";
+                cout << k ;
                 j--;
+                if(j != 0) cout << " ";
             }
             while(j != 0){
                 j--;
-                cout << j << " ";
+                cout << j ;
+                if(j != 0) cout  << " ";
             }
             cout << endl;
         }
